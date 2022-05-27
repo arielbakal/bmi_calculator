@@ -12,7 +12,13 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen>{
   
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('BMI Calculator'),
+        centerTitle: true,
+        elevation: 5,
+        backgroundColor: Colors.amber,
+      ),
+    );
   }
 }
