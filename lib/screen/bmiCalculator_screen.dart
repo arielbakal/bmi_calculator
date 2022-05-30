@@ -8,6 +8,12 @@ class BmiCalculatorScreen extends StatefulWidget {
 }
 
 class _BmiCalculatorScreenState extends State<BmiCalculatorScreen> {
+
+  final TextEditingController _heightController = TextEditingController();
+  final TextEditingController _weightController = TextEditingController();
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +27,10 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 45),
           child: Column(
             children: <Widget>[
-              const TextField(
+              TextField(
+                controller: _heightController,
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Height (cm)',
                   icon: Icon(Icons.upgrade),
                 ),
@@ -31,9 +38,10 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen> {
               const SizedBox(
                 height: 45,
               ),
-              const TextField(
+              TextField(
+                controller: _weightController,
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Weight (kg)',
                   icon: Icon(Icons.accessibility),
                 ),
