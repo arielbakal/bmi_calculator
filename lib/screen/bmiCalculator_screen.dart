@@ -28,6 +28,12 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen> {
 
   }
 
+  void reset(){
+
+    _result = 0;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,20 +80,20 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen> {
                 height: 45,
               ),
               Text(
-              '0',
-              style: const TextStyle(
-                color: Colors.amber,
-                fontSize: 19.4,
-                fontWeight: FontWeight.w500
-              ),  
-            ),
+                _result.toStringAsFixed(2),
+                style: const TextStyle(
+                  color: Colors.amber,
+                  fontSize: 19.4,
+                  fontWeight: FontWeight.w500
+                ),  
+              ),
             ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.amber,
           child: const Icon(Icons.restart_alt_outlined),
-          onPressed: () => {},
+          onPressed: () => reset(),
         ));
   }
 }
