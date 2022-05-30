@@ -51,6 +51,14 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen> {
               const SizedBox(
                 height: 45,
               ),
+              Text(
+              '0',
+              style: const TextStyle(
+                color: Colors.amber,
+                fontSize: 19.4,
+                fontWeight: FontWeight.w500
+              ),  
+            ),
             ],
           ),
         ),
