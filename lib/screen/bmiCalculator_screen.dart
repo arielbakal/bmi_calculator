@@ -12,7 +12,21 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen> {
   final TextEditingController _heightController = TextEditingController();
   final TextEditingController _weightController = TextEditingController();
 
+  double _result = 0;
 
+  void calculateBMI(){
+    double height = double.parse(_heightController.text) / 100 ;
+
+    double weight = double.parse(_weightController.text);
+
+    double heighSquare = height * height;
+
+    double result = weight / heighSquare;
+
+    _result = result;
+    setState(() {});
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +68,7 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.amber,
                 ),
-                onPressed: () => {},
+                onPressed: () => calculateBMI(),
               ),
               const SizedBox(
                 height: 45,
