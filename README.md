@@ -19,7 +19,7 @@ This is a simple BMI calculator which structure is:
 _HeightController
 _WeightController
 
-bmiCalculator() returns double result = weight / ( sqrt(height) / 100 )
+calculateBMI() returns double result = weight / ( sqrt(height) / 100 )
 
 reset() returns result = 0
 
