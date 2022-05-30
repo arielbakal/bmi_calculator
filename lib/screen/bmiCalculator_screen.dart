@@ -19,6 +19,30 @@ class _BmiCalculatorScreenState extends State<BmiCalculatorScreen>{
         elevation: 5,
         backgroundColor: Colors.amber,
       ),
+      body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 40),
+        child: Column(
+          children: const <Widget>[
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'Height (cm)',
+                icon: Icon(Icons.upgrade),
+              ),
+            ),
+            SizedBox(
+              height: 45,
+            ),
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'Weight (kg)',
+                icon: Icon(Icons.accessibility),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
